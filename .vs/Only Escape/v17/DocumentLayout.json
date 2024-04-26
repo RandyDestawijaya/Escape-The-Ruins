@@ -3,7 +3,31 @@
   "WorkspaceRootPath": "C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|c:\\users\\62851\\unity\\msib\\only escape\\assets\\scripts\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|c:\\users\\62851\\unity\\msib\\only escape\\assets\\scripts\\arrowtrap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\arrowtrap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|c:\\users\\62851\\unity\\msib\\only escape\\assets\\scripts\\arrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\arrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\assets\\scripts\\nextlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\nextlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\assets\\scripts\\buttonmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\buttonmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\assets\\scripts\\spiketrap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spiketrap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\assets\\scripts\\fallingboulder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fallingboulder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\assets\\scripts\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,20 +39,8 @@
       "RelativeMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerbottomtrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\assets\\scripts\\buttonmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\buttonmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\assets\\scripts\\fallingboulder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fallingboulder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\assets\\scripts\\getrelicinchest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\getrelicinchest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\assets\\scripts\\nextlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\nextlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\assets\\scripts\\prevlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,6 +67,44 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ArrowTrap.cs",
+              "DocumentMoniker": "C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\Assets\\Scripts\\ArrowTrap.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ArrowTrap.cs",
+              "ToolTip": "C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\Assets\\Scripts\\ArrowTrap.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ArrowTrap.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T08:38:24.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Arrow.cs",
+              "DocumentMoniker": "C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\Assets\\Scripts\\Arrow.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Arrow.cs",
+              "ToolTip": "C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\Assets\\Scripts\\Arrow.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Arrow.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwCkAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T08:31:39.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SpikeTrap.cs",
+              "DocumentMoniker": "C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\Assets\\Scripts\\SpikeTrap.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SpikeTrap.cs",
+              "ToolTip": "C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\Assets\\Scripts\\SpikeTrap.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SpikeTrap.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T07:57:56.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Door.cs",
               "DocumentMoniker": "C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\Assets\\Scripts\\Door.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Door.cs",
@@ -62,12 +112,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Door.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAAwBAAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T15:58:58.62Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T15:58:58.62Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "PlayerBottomTrigger.cs",
               "DocumentMoniker": "C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\Assets\\Scripts\\PlayerBottomTrigger.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerBottomTrigger.cs",
@@ -85,25 +134,26 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\ButtonManager.cs",
               "ToolTip": "C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\Assets\\Scripts\\ButtonManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\ButtonManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAuwBkAAABXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T15:08:27.181Z"
+              "WhenOpened": "2024-04-25T15:08:27.181Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "FallingBoulder.cs",
               "DocumentMoniker": "C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\Assets\\Scripts\\FallingBoulder.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FallingBoulder.cs",
               "ToolTip": "C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\Assets\\Scripts\\FallingBoulder.cs",
               "RelativeToolTip": "Assets\\Scripts\\FallingBoulder.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAHAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-25T01:50:40.45Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "interactionRelic.cs",
               "DocumentMoniker": "C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\Assets\\Scripts\\interactionRelic.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\interactionRelic.cs",
@@ -115,7 +165,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "GetRelicInChest.cs",
               "DocumentMoniker": "C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\Assets\\Scripts\\GetRelicInChest.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GetRelicInChest.cs",
@@ -127,19 +177,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "NextLevel.cs",
               "DocumentMoniker": "C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\Assets\\Scripts\\NextLevel.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\NextLevel.cs",
               "ToolTip": "C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\Assets\\Scripts\\NextLevel.cs",
               "RelativeToolTip": "Assets\\Scripts\\NextLevel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAFAAAA",
+              "ViewState": "AQIAACQAAAAAAAAAAAAuwDQAAABYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T14:43:34.778Z"
+              "WhenOpened": "2024-04-24T14:43:34.778Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "PrevLevel.cs",
               "DocumentMoniker": "C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\Assets\\Scripts\\PrevLevel.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PrevLevel.cs",
@@ -151,7 +202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "FlashLight.cs",
               "DocumentMoniker": "C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\Assets\\Scripts\\FlashLight.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FlashLight.cs",
@@ -163,7 +214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\Assets\\Scripts\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",

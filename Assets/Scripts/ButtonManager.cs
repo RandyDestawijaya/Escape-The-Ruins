@@ -21,6 +21,9 @@ public class ButtonManager : MonoBehaviour
     }
     public void MainMenu()
     {
+        PlayerPrefs.DeleteKey("PlayerPosX" + SceneManager.GetActiveScene().buildIndex);
+        PlayerPrefs.DeleteKey("PlayerPosY" + SceneManager.GetActiveScene().buildIndex);
+        PlayerPrefs.DeleteKey("PlayerPosZ" + SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene("StartMenu");
         Time.timeScale = 1f;
     }

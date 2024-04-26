@@ -51,9 +51,6 @@ public class NextLevel : MonoBehaviour
             float playerPosY = PlayerPrefs.GetFloat("PlayerPosY" + SceneManager.GetActiveScene().buildIndex);
             float playerPosZ = PlayerPrefs.GetFloat("PlayerPosZ" + SceneManager.GetActiveScene().buildIndex);
             player.transform.position = new Vector3(playerPosX, playerPosY, playerPosZ);
-            PlayerPrefs.DeleteKey("PlayerPosX" + SceneManager.GetActiveScene().buildIndex);
-            PlayerPrefs.DeleteKey("PlayerPosY" + SceneManager.GetActiveScene().buildIndex);
-            PlayerPrefs.DeleteKey("PlayerPosZ" + SceneManager.GetActiveScene().buildIndex);
         }
         else if (PlayerPrefs.HasKey("PlayerPosX") && PlayerPrefs.HasKey("SceneSave"))
         {
