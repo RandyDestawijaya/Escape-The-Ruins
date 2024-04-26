@@ -13,9 +13,10 @@ public class GetRelicInChest : MonoBehaviour
     bool isOpen = false;
     private void Start()
     {
-        if (PlayerPrefs.GetInt("RelicIndex" + relic) == 0)
+        if (PlayerPrefs.HasKey("RelicIndex" + relic))
         {
             isOpen = true;
+            Debug.Log("udah ada");
         }
         text = textObject.GetComponent<TextMeshPro>();
     }
@@ -28,7 +29,8 @@ public class GetRelicInChest : MonoBehaviour
             if (!isOpen)
             {
                 PlayerPrefs.SetInt("RelicIndex" + relic, 0);
-                PlayerPrefs.Save();    
+                PlayerPrefs.Save();
+                Debug.Log("Dapet 1");
                 isOpen = true;    
             }
             else 

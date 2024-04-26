@@ -3334,6 +3334,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasPause
       objectReference: {fileID: 0}
+    - target: {fileID: 4211777749281715235, guid: 81567b555b2dc524b98dca9c91e728e6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.4042
+      objectReference: {fileID: 0}
+    - target: {fileID: 4211777749281715235, guid: 81567b555b2dc524b98dca9c91e728e6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.4042
+      objectReference: {fileID: 0}
+    - target: {fileID: 4211777749281715235, guid: 81567b555b2dc524b98dca9c91e728e6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.4042
+      objectReference: {fileID: 0}
+    - target: {fileID: 4211777749281715235, guid: 81567b555b2dc524b98dca9c91e728e6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -119
+      objectReference: {fileID: 0}
+    - target: {fileID: 7833858154985410063, guid: 81567b555b2dc524b98dca9c91e728e6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.4042
+      objectReference: {fileID: 0}
+    - target: {fileID: 7833858154985410063, guid: 81567b555b2dc524b98dca9c91e728e6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.4042
+      objectReference: {fileID: 0}
+    - target: {fileID: 7833858154985410063, guid: 81567b555b2dc524b98dca9c91e728e6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.4042
+      objectReference: {fileID: 0}
+    - target: {fileID: 8173356520648493552, guid: 81567b555b2dc524b98dca9c91e728e6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.4042
+      objectReference: {fileID: 0}
+    - target: {fileID: 8173356520648493552, guid: 81567b555b2dc524b98dca9c91e728e6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.4042
+      objectReference: {fileID: 0}
+    - target: {fileID: 8173356520648493552, guid: 81567b555b2dc524b98dca9c91e728e6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.4042
+      objectReference: {fileID: 0}
+    - target: {fileID: 8173356520648493552, guid: 81567b555b2dc524b98dca9c91e728e6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 114
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5534,6 +5578,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1826340726}
+  - component: {fileID: 1826340727}
   m_Layer: 0
   m_Name: Relics
   m_TagString: Untagged
@@ -5558,6 +5603,21 @@ Transform:
   - {fileID: 1467297234}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1826340727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826340725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b94d1bc6596fc3848877b228e94a3ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToActivate:
+  - {fileID: 1467297233}
+  - {fileID: 1137964397}
 --- !u!1 &1854181283
 GameObject:
   m_ObjectHideFlags: 0
