@@ -41,6 +41,11 @@ public class Arrow : MonoBehaviour
         {
             speed = 0;
             rb.velocity = Vector2.left * speed;
+            if (ArrowTrap.remainingArrow > 1)
+            {
+                Destroy(gameObject, 5f);
+                ArrowTrap.RemoveArrow();
+            }    
         }
     }
 }

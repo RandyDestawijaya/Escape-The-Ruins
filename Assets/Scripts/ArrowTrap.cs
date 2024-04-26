@@ -8,6 +8,7 @@ public class ArrowTrap : MonoBehaviour
     public GameObject Arrow;
     float timebetween;
     public float starttimebetween;
+    public static int remainingArrow = 0;
     private void Start()
     {
         timebetween = starttimebetween;
@@ -18,10 +19,20 @@ public class ArrowTrap : MonoBehaviour
         {
             Instantiate(Arrow, Firepoint.position, Firepoint.rotation);
             timebetween = starttimebetween;
+            remainingArrow = remainingArrow + 1;
         }
-        else
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
         {
             timebetween -= Time.deltaTime;
         }
+    }
+
+    public static void RemoveArrow()
+    {
+        remainingArrow--;
     }
 }

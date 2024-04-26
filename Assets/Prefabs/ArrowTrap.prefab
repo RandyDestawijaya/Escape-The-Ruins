@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5671389344508270135}
   - component: {fileID: 6583251047397659576}
   - component: {fileID: 6562747370533753549}
+  - component: {fileID: 236527303746827708}
   m_Layer: 0
   m_Name: ArrowTrap
   m_TagString: Untagged
@@ -101,7 +102,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Firepoint: {fileID: 919733559424148015}
   Arrow: {fileID: 6021466228491388088}
-  starttimebetween: 1
+  starttimebetween: 0.3
+--- !u!61 &236527303746827708
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419994272166189233}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -2.2394578, y: 0.1875}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.625, y: 0.375}
+    newSize: {x: 0.625, y: 0.375}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.1039157, y: 0.375}
+  m_EdgeRadius: 0
 --- !u!1 &430893681399664004
 GameObject:
   m_ObjectHideFlags: 0
