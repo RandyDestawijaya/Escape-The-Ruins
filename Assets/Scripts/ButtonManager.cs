@@ -1,0 +1,52 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class ButtonManager : MonoBehaviour
+{
+    public void StartGame()
+    {
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+        SceneManager.LoadScene("Level1");
+    }
+    public void PauseGame()
+    {
+        Time.timeScale = 0f;
+    }
+    public void ResumeGame()
+    {
+        Time.timeScale = 1f;
+    }
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("StartMenu");
+        Time.timeScale = 1f;
+    }
+    public void SaveGame()
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            string currentSceneName = SceneManager.GetActiveScene().name;
+            PlayerPrefs.SetFloat("PlayerPosX", player.transform.position.x);
+            PlayerPrefs.SetFloat("PlayerPosY", player.transform.position.y);
+            PlayerPrefs.SetFloat("PlayerPosZ", player.transform.position.z);
+            PlayerPrefs.SetString("SceneSave", currentSceneName);
+            PlayerPrefs.Save();
+        }
+    }
+    public void ContinueGame()
+    {
+        if (PlayerPrefs.HasKey("SceneSave"))
+        {
+            string loadScene = PlayerPrefs.GetString("SceneSave");
+            SceneManager.LoadScene(loadScene);
+        }
+    }
+    public void Museum()
+    {
+        SceneManager.LoadScene("Museum");
+    }
+}
