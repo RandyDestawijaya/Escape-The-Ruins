@@ -24,13 +24,8 @@ public class ButtonManager : MonoBehaviour
         PlayerPrefs.DeleteKey("PlayerPosX" + SceneManager.GetActiveScene().buildIndex);
         PlayerPrefs.DeleteKey("PlayerPosY" + SceneManager.GetActiveScene().buildIndex);
         PlayerPrefs.DeleteKey("PlayerPosZ" + SceneManager.GetActiveScene().buildIndex);
-        SceneManager.LoadScene("StartMenu");
-        Time.timeScale = 1f;
-    }
-    public void SaveGame()
-    {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player != null)
+        if (player != null && SceneManager.GetActiveScene().name != "Museum")
         {
             string currentSceneName = SceneManager.GetActiveScene().name;
             PlayerPrefs.SetFloat("PlayerPosX", player.transform.position.x);
@@ -39,6 +34,8 @@ public class ButtonManager : MonoBehaviour
             PlayerPrefs.SetString("SceneSave", currentSceneName);
             PlayerPrefs.Save();
         }
+        SceneManager.LoadScene("StartMenu");
+        Time.timeScale = 1f;
     }
     public void ContinueGame()
     {
