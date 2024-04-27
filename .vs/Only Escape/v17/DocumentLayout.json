@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\assets\\scripts\\relicinmuseum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\relicinmuseum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\assets\\scripts\\buttonmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\buttonmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|c:\\users\\62851\\unity\\msib\\only escape\\assets\\scripts\\arrowtrap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\assets\\scripts\\arrowtrap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\arrowtrap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\assets\\scripts\\getrelicinchest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\getrelicinchest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\assets\\scripts\\relicinmuseum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\relicinmuseum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{009FE1EC-4B59-7F42-BD49-54ACEBABD3A0}|Assembly-CSharp.csproj|C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\assets\\scripts\\interactionrelic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,11 +66,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "RelicInMuseum.cs",
               "DocumentMoniker": "C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\Assets\\Scripts\\RelicInMuseum.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\RelicInMuseum.cs",
@@ -78,11 +78,12 @@
               "RelativeToolTip": "Assets\\Scripts\\RelicInMuseum.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T10:11:50.341Z"
+              "WhenOpened": "2024-04-26T10:11:50.341Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ArrowTrap.cs",
               "DocumentMoniker": "C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\Assets\\Scripts\\ArrowTrap.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ArrowTrap.cs",
@@ -90,12 +91,11 @@
               "RelativeToolTip": "Assets\\Scripts\\ArrowTrap.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAAwCEAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T08:38:24.323Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-26T08:38:24.323Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Arrow.cs",
               "DocumentMoniker": "C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\Assets\\Scripts\\Arrow.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Arrow.cs",
@@ -143,7 +143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ButtonManager.cs",
               "DocumentMoniker": "C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\Assets\\Scripts\\ButtonManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ButtonManager.cs",
@@ -151,8 +151,7 @@
               "RelativeToolTip": "Assets\\Scripts\\ButtonManager.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAqwBsAAABNAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T15:08:27.181Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T15:08:27.181Z"
             },
             {
               "$type": "Document",
@@ -180,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "GetRelicInChest.cs",
               "DocumentMoniker": "C:\\Users\\62851\\Unity\\MSIB\\Only Escape\\Assets\\Scripts\\GetRelicInChest.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GetRelicInChest.cs",
