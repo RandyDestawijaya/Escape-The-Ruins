@@ -11,6 +11,7 @@ public class GetRelicInChest : MonoBehaviour
     private bool interaction = false;
     [SerializeField] GameObject[] chest;
     bool isOpen = false;
+    [SerializeField] TriggeredDialogue triggeredDialogue;
     private void Start()
     {
         if (PlayerPrefs.HasKey("RelicIndex" + relic))
@@ -31,7 +32,8 @@ public class GetRelicInChest : MonoBehaviour
                 PlayerPrefs.SetInt("RelicIndex" + relic, 0);
                 PlayerPrefs.Save();
                 Debug.Log("Dapet 1");
-                isOpen = true;    
+                isOpen = true;
+                triggeredDialogue.StartDialogue();
             }
             else 
             {
