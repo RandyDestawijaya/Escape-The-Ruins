@@ -12,19 +12,19 @@ public class TriggeredDialogue : MonoBehaviour
 
     private int index;
 
-    //[SerializeField]
-    // Achievement achievement;
+    [SerializeField]
+    Achievement achievement;
 
-    //[SerializeField]
-    //AudioClip[] audioclips;
-    //AudioSource audioSource;
+    [SerializeField]
+    AudioClip[] audioclips;
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
-        //gameObject.SetActive(false);
-        //audioSource = GetComponent<AudioSource>();
-        //textComponent.text = string.Empty;
+        gameObject.SetActive(false);
+        audioSource = GetComponent<AudioSource>();
+        textComponent.text = string.Empty;
     }
 
     // Update is called once per frame
@@ -35,8 +35,8 @@ public class TriggeredDialogue : MonoBehaviour
             if (textComponent.text == lines[index])
             {
                 NextLine();
-                //audioSource.clip = audioclips[0];
-                //audioSource.Play();
+                audioSource.clip = audioclips[0];
+                audioSource.Play();
             }
             else
             {
@@ -53,8 +53,8 @@ public class TriggeredDialogue : MonoBehaviour
         index = 0;
         textComponent.text = string.Empty;
         StartCoroutine(TypeLine());
-        //audioSource.clip = audioclips[0];
-        //audioSource.Play();
+        audioSource.clip = audioclips[0];
+        audioSource.Play();
     }
 
     IEnumerator TypeLine()
@@ -76,9 +76,9 @@ public class TriggeredDialogue : MonoBehaviour
         }
         else
         {
-            gameObject.SetActive(false);
             Time.timeScale = 1f;
-            //achievement.StartDialogue();
+            gameObject.SetActive(false);
+            achievement.StartDialogue();
         }
     }
 }

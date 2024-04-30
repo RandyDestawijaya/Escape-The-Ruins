@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,10 +15,15 @@ public class PlayerController : MonoBehaviour
     private float fallingGravity = -29.43f;
     Animator animator;
 
+    [SerializeField]
+    AudioClip[] audioclips;
+    AudioSource audioSource;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -37,6 +43,8 @@ public class PlayerController : MonoBehaviour
         {
             Physics2D.gravity = new Vector2(0, jumpingGravity);
             rb.velocity = Vector3.up * jumpPower;
+            audioSource.clip = audioclips[0];
+            audioSource.Play();
             doubleJump--;
         }
         else if (Input.GetKeyUp(KeyCode.Space))
@@ -68,5 +76,13 @@ public class PlayerController : MonoBehaviour
     void Animation()
     {
         animator.SetFloat("Moving", Mathf.Abs(horizontalInput));
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.tag == "Spike")
+        {
+            SceneManager.LoadScene("SpikeGameover");
+        }
     }
 }

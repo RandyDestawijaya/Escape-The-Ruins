@@ -7,9 +7,7 @@ public class ButtonManager : MonoBehaviour
 {
     public void StartGame()
     {
-        PlayerPrefs.DeleteAll();
-        PlayerPrefs.Save();
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Cutscene");
     }
     public void PauseGame()
     {

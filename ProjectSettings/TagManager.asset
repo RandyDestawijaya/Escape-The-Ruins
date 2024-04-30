@@ -9,6 +9,7 @@ TagManager:
   - NextDoor
   - wall
   - Arrow
+  - Spike
   layers:
   - Default
   - TransparentFX
