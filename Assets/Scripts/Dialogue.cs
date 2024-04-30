@@ -3,11 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+[System.Serializable]
+public class DialogueLine
+{
+    public string line;
+    public Sprite characterIcon;
+}
+
 public class Dialogue : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
-    public string[] lines;
+    public List<DialogueLine> dialogueLines;
     public float textSpeed;
+    public GameObject characterIcon; // Reference to the character icon GameObject
 
     private int index;
 
@@ -28,7 +36,7 @@ public class Dialogue : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            if (textComponent.text == lines[index])
+            if (textComponent.text == dialogueLines[index].line)
             {
                 NextLine();
                 audioSource.clip = audioclips[0];
@@ -37,7 +45,8 @@ public class Dialogue : MonoBehaviour
             else
             {
                 StopAllCoroutines();
-                textComponent.text = lines[index];
+                textComponent.text = dialogueLines[index].line;
+                SetCharacterIcon(dialogueLines[index].characterIcon);
             }
         }
     }
@@ -49,11 +58,12 @@ public class Dialogue : MonoBehaviour
         StartCoroutine(TypeLine());
         audioSource.clip = audioclips[0];
         audioSource.Play();
+        SetCharacterIcon(dialogueLines[index].characterIcon);
     }
 
     IEnumerator TypeLine()
     {
-        foreach (char c in lines[index].ToCharArray())
+        foreach (char c in dialogueLines[index].line.ToCharArray())
         {
             textComponent.text += c;
             yield return new WaitForSecondsRealtime(textSpeed);
@@ -62,7 +72,7 @@ public class Dialogue : MonoBehaviour
 
     void NextLine()
     {
-        if (index < lines.Length - 1)
+        if (index < dialogueLines.Count - 1)
         {
             index++;
             textComponent.text = string.Empty;
@@ -72,6 +82,16 @@ public class Dialogue : MonoBehaviour
         {
             gameObject.SetActive(false);
             Time.timeScale = 1f;
+            characterIcon.SetActive(false);
+        }
+    }
+
+    void SetCharacterIcon(Sprite icon)
+    {
+        if (characterIcon != null)
+        {
+            characterIcon.GetComponent<SpriteRenderer>().sprite = icon;
+            characterIcon.SetActive(true);
         }
     }
 }

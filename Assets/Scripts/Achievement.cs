@@ -24,7 +24,7 @@ public class Achievement : MonoBehaviour
     void Start()
     {
         gameObject.SetActive(false);
-        
+        textComponent.text = string.Empty;
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -40,10 +40,9 @@ public class Achievement : MonoBehaviour
 
     public void StartDialogue()
     {
-        Time.timeScale = 1f;
         gameObject.SetActive(true);
         index = 0;
-        textComponent.text = string.Empty;
+
         textComponent.text = lines[index];
 
         // Play the timeline animation

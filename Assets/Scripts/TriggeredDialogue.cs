@@ -9,6 +9,7 @@ public class TriggeredDialogue : MonoBehaviour
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
+    public GameObject characterIcon;
 
     private int index;
 
@@ -55,6 +56,11 @@ public class TriggeredDialogue : MonoBehaviour
         StartCoroutine(TypeLine());
         audioSource.clip = audioclips[0];
         audioSource.Play();
+
+        if (characterIcon != null)
+        {
+            characterIcon.SetActive(true);
+        }
     }
 
     IEnumerator TypeLine()
@@ -76,8 +82,12 @@ public class TriggeredDialogue : MonoBehaviour
         }
         else
         {
-            Time.timeScale = 1f;
             gameObject.SetActive(false);
+            Time.timeScale = 1f;
+            if (characterIcon != null)
+            {
+                characterIcon.SetActive(false);
+            }
             achievement.StartDialogue();
         }
     }
