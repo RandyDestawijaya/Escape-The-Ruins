@@ -9,8 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed;
     Rigidbody2D rb;
     [SerializeField] private float jumpPower;
-    [SerializeField] private bool ground = false;
-    [SerializeField] private float doubleJump = 1;
+    private bool isGrounded = true;
     private float jumpingGravity = -9.81f;
     private float fallingGravity = -29.43f;
     Animator animator;
@@ -39,21 +38,16 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
 
-        if (Input.GetKeyDown(KeyCode.Space) && doubleJump > 0)
+        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
             Physics2D.gravity = new Vector2(0, jumpingGravity);
             rb.velocity = Vector3.up * jumpPower;
             audioSource.clip = audioclips[0];
             audioSource.Play();
-            doubleJump--;
         }
         else if (Input.GetKeyUp(KeyCode.Space))
         {
             Physics2D.gravity = new Vector2(0, fallingGravity);
-        }
-        if (ground)
-        {
-            doubleJump = 1;
         }
     }
 
@@ -63,19 +57,16 @@ public class PlayerController : MonoBehaviour
         {
             transform.localScale = new Vector3(-1, 1, 1);
         }
-        if (horizontalInput > 0)
+        else if (horizontalInput > 0)
         {
             transform.localScale = new Vector3(1, 1, 1);
         }
-    }
-    public void OnGround(bool x)
-    {
-        ground = x;
     }
 
     void Animation()
     {
         animator.SetFloat("Moving", Mathf.Abs(horizontalInput));
+        animator.SetBool("OnGround", isGrounded);
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -83,6 +74,22 @@ public class PlayerController : MonoBehaviour
         if (col.tag == "Spike")
         {
             SceneManager.LoadScene("SpikeGameover");
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("ground"))
+        {
+            isGrounded = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("ground"))
+        {
+            isGrounded = false;
         }
     }
 }

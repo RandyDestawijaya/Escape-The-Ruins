@@ -3809,7 +3809,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.3
+  m_Intensity: 0.09
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -4953,6 +4953,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5257109804597645300, guid: 9b0b1556b63b4db44a47ad9fbcf7c630, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5257109804597645300, guid: 9b0b1556b63b4db44a47ad9fbcf7c630, type: 3}
+      propertyPath: m_FalloffIntensity
+      value: 0.518
+      objectReference: {fileID: 0}
+    - target: {fileID: 5257109804597645300, guid: 9b0b1556b63b4db44a47ad9fbcf7c630, type: 3}
+      propertyPath: m_PointLightInnerAngle
+      value: 55.91999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5257109804597645300, guid: 9b0b1556b63b4db44a47ad9fbcf7c630, type: 3}
+      propertyPath: m_PointLightOuterAngle
+      value: 55.91999
+      objectReference: {fileID: 0}
     - target: {fileID: 5266964114986905264, guid: 9b0b1556b63b4db44a47ad9fbcf7c630, type: 3}
       propertyPath: m_Name
       value: Player
@@ -5008,6 +5024,10 @@ PrefabInstance:
     - target: {fileID: 6347393926662100660, guid: 9b0b1556b63b4db44a47ad9fbcf7c630, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778056847978558158, guid: 9b0b1556b63b4db44a47ad9fbcf7c630, type: 3}
+      propertyPath: ChangeTime
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
