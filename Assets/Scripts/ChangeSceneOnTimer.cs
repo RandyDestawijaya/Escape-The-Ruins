@@ -6,6 +6,7 @@ using UnityEngine;
 public class ChangeSceneOnTimer : MonoBehaviour
 {
     public float ChangeTime;
+    public string SceneName;
 
     // Update is called once per frame
     private void Update()
@@ -14,9 +15,7 @@ public class ChangeSceneOnTimer : MonoBehaviour
         if (ChangeTime <= 0)
         {
             Time.timeScale = 1;
-            PlayerPrefs.DeleteAll();
-            PlayerPrefs.Save();
-            SceneManager.LoadScene("Level1");
+            SceneManager.LoadScene(SceneName);
         }
        
     }

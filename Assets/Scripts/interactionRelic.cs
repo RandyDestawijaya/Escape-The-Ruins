@@ -6,17 +6,23 @@ using UnityEngine;
 
 public class InteractionRelic : MonoBehaviour
 {
-    [SerializeField] private float relic;
+    [SerializeField] private GameObject InfoUI;
     [SerializeField] private GameObject textObject;
+    [SerializeField] private GameObject Relic;
+    [SerializeField] private GameObject InfoNull;
     private bool interaction = false;
-    [SerializeField] TriggeredDialogue triggeredDialogue;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && interaction)
         {
-            PlayerPrefs.SetInt("RelicIndex" + relic, 1);
-            PlayerPrefs.Save(); 
-            triggeredDialogue.StartDialogue();
+            if (Relic.activeInHierarchy)
+            {
+                InfoUI.SetActive(true);
+            }
+            else 
+            {
+                InfoNull.SetActive(true);
+            }
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

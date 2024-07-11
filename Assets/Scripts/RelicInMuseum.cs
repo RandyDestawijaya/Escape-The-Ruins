@@ -8,7 +8,7 @@ public class RelicInMuseum : MonoBehaviour
     void Start()
     {
         // Loop melalui objek yang ingin diaktifkan
-        for (int i = 0; i <= objectsToActivate.Length; i++)
+        for (int i = 0; i < objectsToActivate.Length; i++)
         {
             // Periksa apakah ada PlayerPrefs untuk objek ini
             if (PlayerPrefs.HasKey("RelicIndex" + i))

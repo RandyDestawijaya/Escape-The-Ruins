@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
@@ -10,7 +11,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     [SerializeField] private float jumpPower;
     private bool isGrounded = true;
-    private float jumpingGravity = -9.81f;
+    private float jumpingGravity = -9.18f;
     private float fallingGravity = -29.43f;
     Animator animator;
 
@@ -18,21 +19,29 @@ public class PlayerController : MonoBehaviour
     AudioClip[] audioclips;
     AudioSource audioSource;
 
+    [SerializeField]
+    GameObject PauseMenu;
+
+    private bool canMove = true; // Flag to control movement
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>(); 
+        //LoadPlayerPosition();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        Movement();
-        Facing();
+        if (canMove) // Only allow movement if canMove is true
+        {
+            Movement();
+            Facing();
+        }
         Animation();
+        Pause();
     }
-
     void Movement()
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
@@ -51,15 +60,25 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void Pause()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            bool isPaused = Time.timeScale == 0f;
+            Time.timeScale = isPaused ? 1f : 0f;
+            PauseMenu.SetActive(!isPaused);
+        }
+    }
+
     void Facing()
     {
         if (horizontalInput < 0)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-1.5f, 1.5f, 1.5f);
         }
         else if (horizontalInput > 0)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
         }
     }
 
@@ -71,25 +90,137 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        if (col.tag == "ground")
+        {
+            isGrounded = true;
+        }
+
+        if (col.tag == "MovingPlatform")
+        {
+            transform.parent = col.transform;
+            isGrounded = true;
+        }
+
         if (col.tag == "Spike")
         {
-            SceneManager.LoadScene("SpikeGameover");
+            StartCoroutine(SpikeDeathScene());
+            audioSource.clip = audioclips[1];
+            audioSource.Play();
+        }
+
+        if (col.tag == "FallTrigger")
+        {
+            StartCoroutine(FallDeathScene());
+            audioSource.clip = audioclips[1];
+            audioSource.Play();
+        }
+
+        if (col.tag == "Arrow")
+        {
+            StartCoroutine(ArrowDeathScene());
+            audioSource.clip = audioclips[1];
+            audioSource.Play();
+        }
+
+        if (col.tag == "Finish")
+        {
+            StartCoroutine(Epilogue());
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("ground"))
+        if (collision.gameObject.CompareTag("Boulder"))
         {
-            isGrounded = true;
+            StartCoroutine(BoulderDeathScene());
+            audioSource.clip = audioclips[1];
+            audioSource.Play();
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D col)
     {
-        if (collision.gameObject.CompareTag("ground"))
+        if (col.tag == "ground")
         {
             isGrounded = false;
         }
+
+        if (col.tag == "MovingPlatform")
+        {
+            transform.parent = null;
+            isGrounded = false;
+        }
+    }
+
+
+    IEnumerator SpikeDeathScene()
+    {
+        canMove = false; // Disable movement
+
+        animator.SetTrigger("Death");
+
+        yield return new WaitForSeconds(2.5f);
+
+        SceneManager.LoadScene("SpikeGameover");
+    }
+
+    IEnumerator FallDeathScene()
+    {
+        canMove = false; // Disable movement
+
+        animator.SetTrigger("Death");
+
+        yield return new WaitForSeconds(2.5f);
+
+        SceneManager.LoadScene("FallGameover");
+    }
+
+    IEnumerator ArrowDeathScene()
+    {
+        canMove = false; // Disable movement
+
+        animator.SetTrigger("Death");
+
+        yield return new WaitForSeconds(2.5f);
+
+        SceneManager.LoadScene("ArrowGameover");
+    }
+
+    IEnumerator BoulderDeathScene()
+    {
+        canMove = false; // Disable movement
+
+        animator.SetTrigger("Death");
+
+        yield return new WaitForSeconds(2.5f);
+
+        SceneManager.LoadScene("BoulderGameover");
+    }
+
+    IEnumerator Epilogue()
+    {
+        PlayerPrefs.SetInt("RelicIndex" + 4, 4);
+        PlayerPrefs.Save();
+        yield return new WaitForEndOfFrame(); 
+        SceneManager.LoadScene("Epilogue");
+    }
+
+    private void LoadPlayerPosition()
+    {
+        if (PlayerPrefs.HasKey("PlayerPosX") && SceneManager.GetActiveScene().name == "Level1")
+        {
+            float playerPosX = PlayerPrefs.GetFloat("PlayerPosX");
+            float playerPosY = PlayerPrefs.GetFloat("PlayerPosY");
+            float playerPosZ = PlayerPrefs.GetFloat("PlayerPosZ");
+            transform.position = new Vector3(playerPosX, playerPosY, playerPosZ);
+        }
+    }
+
+    public void UpdateCheckpoint(Vector3 checkpointPosition)
+    {
+        PlayerPrefs.SetFloat("PlayerPosX", checkpointPosition.x);
+        PlayerPrefs.SetFloat("PlayerPosY", checkpointPosition.y);
+        PlayerPrefs.SetFloat("PlayerPosZ", checkpointPosition.z);
+        PlayerPrefs.Save();
     }
 }

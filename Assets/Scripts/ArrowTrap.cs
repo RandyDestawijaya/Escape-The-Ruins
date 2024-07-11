@@ -21,11 +21,7 @@ public class ArrowTrap : MonoBehaviour
             timebetween = starttimebetween;
             remainingArrow = remainingArrow + 1;
         }
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
+        else
         {
             timebetween -= Time.deltaTime;
         }

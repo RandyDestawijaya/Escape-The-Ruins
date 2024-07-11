@@ -7,18 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class GameoverScene : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    private void Update()
-    {
-        
-    }
-
     public void retry()
     {
         SceneManager.LoadScene("Level1");
@@ -26,6 +14,7 @@ public class GameoverScene : MonoBehaviour
 
     public void quit()
     {
-        SceneManager.LoadScene("StartMenu");
+        PlayerPrefs.SetString("SceneSave", "Level1");
+        SceneManager.LoadScene("MainMenu");
     }
 }

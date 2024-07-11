@@ -2,37 +2,53 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour
 {
+    private void Start()
+    {
+        
+        GameObject ContinueButton = GameObject.Find("ContinueButton");
+        if (ContinueButton != null)
+        {
+            Button conButton = ContinueButton.GetComponent<Button>();
+            if (PlayerPrefs.HasKey("SceneSave"))
+            {
+                if(PlayerPrefs.GetString("SceneSave") == "Level1")
+                {
+                    conButton.interactable = true;
+                } 
+            }
+        }
+    }
     public void StartGame()
     {
+        for (int i = 0; i < 4; i++)
+        {
+            PlayerPrefs.DeleteKey("RelicIndex" + i);
+        }
+        PlayerPrefs.DeleteKey("PlayerPosX");
+        PlayerPrefs.DeleteKey("PlayerPosY");
+        PlayerPrefs.DeleteKey("PlayerPosZ");
+        PlayerPrefs.DeleteKey("SceneSave");
+        PlayerPrefs.DeleteKey("Guidecheckpoint");
+        PlayerPrefs.DeleteKey("Guidechest");
+        PlayerPrefs.SetInt("DialogTutorial", 0);
+        PlayerPrefs.SetInt("DialogLevel1", 0);
+        PlayerPrefs.Save();
         SceneManager.LoadScene("Cutscene");
     }
-    public void PauseGame()
-    {
-        Time.timeScale = 0f;
-    }
-    public void ResumeGame()
-    {
-        Time.timeScale = 1f;
-    }
+
     public void MainMenu()
     {
-        PlayerPrefs.DeleteKey("PlayerPosX" + SceneManager.GetActiveScene().buildIndex);
-        PlayerPrefs.DeleteKey("PlayerPosY" + SceneManager.GetActiveScene().buildIndex);
-        PlayerPrefs.DeleteKey("PlayerPosZ" + SceneManager.GetActiveScene().buildIndex);
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player != null && SceneManager.GetActiveScene().name != "Museum")
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        if (currentSceneName == "Level1")
         {
-            string currentSceneName = SceneManager.GetActiveScene().name;
-            PlayerPrefs.SetFloat("PlayerPosX", player.transform.position.x);
-            PlayerPrefs.SetFloat("PlayerPosY", player.transform.position.y);
-            PlayerPrefs.SetFloat("PlayerPosZ", player.transform.position.z);
             PlayerPrefs.SetString("SceneSave", currentSceneName);
             PlayerPrefs.Save();
         }
-        SceneManager.LoadScene("StartMenu");
+        SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1f;
     }
     public void ContinueGame()
@@ -46,5 +62,10 @@ public class ButtonManager : MonoBehaviour
     public void Museum()
     {
         SceneManager.LoadScene("Museum");
+    }
+
+    public void Quit()
+    {
+        Application.Quit(); 
     }
 }

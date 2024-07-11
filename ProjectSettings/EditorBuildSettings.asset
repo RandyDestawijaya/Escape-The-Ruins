@@ -6,21 +6,36 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/StartMenu.unity
+    path: Assets/Scenes/Logo.unity
+    guid: 7ce0ab4daf148894883b0651db5aabd7
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
     guid: 053abd12fe59a814f828a6540bdb64b3
   - enabled: 1
     path: Assets/Scenes/Cutscene.unity
     guid: 464d469c98305694a9c612a72535df83
   - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 175c7cec78b464a4bb7b1ea8b85aedc8
+  - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/Level2.unity
-    guid: 20e45104873761c4e871d2e1ac5b62cb
   - enabled: 1
     path: Assets/Scenes/Museum.unity
     guid: 6c590b8355153ba40885c203b853ddc4
   - enabled: 1
     path: Assets/Scenes/SpikeGameover.unity
     guid: 7af7014eb0011bc4599d707ad8d9e56a
+  - enabled: 1
+    path: Assets/Scenes/FallGameover.unity
+    guid: 63714a1fa0799db4ab26c9c8d5cdd868
+  - enabled: 1
+    path: Assets/Scenes/ArrowGameover.unity
+    guid: 8a53c40df4018624b91ce569699a3049
+  - enabled: 1
+    path: Assets/Scenes/BoulderGameover.unity
+    guid: 7c6adc1fa7be25f47a536d0a15b2b2e8
+  - enabled: 1
+    path: Assets/Scenes/Epilogue.unity
+    guid: 1a655eb747ad41944bfd5c0bb0436e16
   m_configObjects: {}

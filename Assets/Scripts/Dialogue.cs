@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class DialogueLine
@@ -15,7 +16,10 @@ public class Dialogue : MonoBehaviour
     public TextMeshProUGUI textComponent;
     public List<DialogueLine> dialogueLines;
     public float textSpeed;
-    public GameObject characterIcon; // Reference to the character icon GameObject
+    public GameObject characterIcon;
+
+    [SerializeField]
+    PlayerController PlayerController;
 
     private int index;
 
@@ -23,18 +27,26 @@ public class Dialogue : MonoBehaviour
     AudioClip[] audioclips;
     AudioSource audioSource;
 
-    // Start is called before the first frame update
+    private bool Dialog = false;
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
         textComponent.text = string.Empty;
-        StartDialogue();
+        string sceneName = SceneManager.GetActiveScene().name;
+        gameObject.SetActive(false);
+        if (PlayerPrefs.GetInt("Dialog" + sceneName) == 0)
+        {
+            gameObject.SetActive(true);
+            PlayerPrefs.SetInt("Dialog" + sceneName, 1);
+            PlayerPrefs.Save();
+            StartDialogue();
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Return) && Dialog)
         {
             if (textComponent.text == dialogueLines[index].line)
             {
@@ -51,14 +63,16 @@ public class Dialogue : MonoBehaviour
         }
     }
 
-    void StartDialogue()
+    public void StartDialogue()
     {
+        Dialog = true;
         Time.timeScale = 0f;
         index = 0;
         StartCoroutine(TypeLine());
         audioSource.clip = audioclips[0];
         audioSource.Play();
         SetCharacterIcon(dialogueLines[index].characterIcon);
+        PlayerController.enabled = false;
     }
 
     IEnumerator TypeLine()
@@ -80,8 +94,10 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
+            Dialog = false;
             gameObject.SetActive(false);
             Time.timeScale = 1f;
+            PlayerController.enabled = true;
             characterIcon.SetActive(false);
         }
     }

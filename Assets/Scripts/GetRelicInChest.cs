@@ -5,41 +5,58 @@ using UnityEngine;
 
 public class GetRelicInChest : MonoBehaviour
 {
-    [SerializeField] private float relic;
+    [SerializeField] private int relic;
+    private Animator animator;
+    [SerializeField] private GameObject item;
+    [SerializeField] private GameObject point;
     [SerializeField] private GameObject textObject;
     private TextMeshPro text;
-    private bool interaction = false;
-    [SerializeField] GameObject[] chest;
-    bool isOpen = false;
-    [SerializeField] TriggeredDialogue TriggeredDialogue;
+    private bool interaction = false,isOpen = false ;
+    [SerializeField] private GameObject TriggeredDialogue;
     private void Start()
     {
+        animator = GetComponent<Animator>();
+        text = textObject.GetComponent<TextMeshPro>();
         if (PlayerPrefs.HasKey("RelicIndex" + relic))
         {
             isOpen = true;
-            Debug.Log("udah ada");
         }
-        text = textObject.GetComponent<TextMeshPro>();
     }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && interaction)
         {
-            chest[0].SetActive(false);
-            chest[1].SetActive(true);
+            animator.SetBool("openChest", true);
             if (!isOpen)
             {
-                PlayerPrefs.SetInt("RelicIndex" + relic, 0);
+                UpdateInfo("");
+                StartCoroutine(MoveItemUp(item));
+                PlayerPrefs.SetInt("RelicIndex" + relic, relic);
                 PlayerPrefs.Save();
-                Debug.Log("Dapet 1");
                 isOpen = true;
-                TriggeredDialogue.StartDialogue();
             }
             else 
             {
                 UpdateInfo("Chest Empty!");
             } 
         }
+    }
+    private IEnumerator MoveItemUp(GameObject item)
+    {
+        yield return new WaitForSeconds(1);
+        item.SetActive(true);
+        while (item.transform.position.y < point.transform.position.y)
+        {
+            float step = 2f * Time.deltaTime;
+            item.transform.Translate(Vector3.up * step);
+            yield return null;
+        }
+        yield return new WaitForSeconds(1);
+        TriggeredDialogue.SetActive(true);
+        TriggeredDialogue dialogue = TriggeredDialogue.GetComponent<TriggeredDialogue>();
+        yield return new WaitForEndOfFrame();
+        item.SetActive(false);
+        dialogue.StartDialogue();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -55,8 +72,7 @@ public class GetRelicInChest : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             interaction = false;
-            chest[0].SetActive(true);
-            chest[1].SetActive(false);
+            animator.SetBool("openChest", false);
             textObject.SetActive(false);
         }
     }
